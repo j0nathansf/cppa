@@ -1,0 +1,4 @@
+Très bon code. Revoir éventuellement la coding style car les accolades sont à
+certains moments présents sur la même ligne et d'autres fois sur une nouvelle
+ligne.
+
