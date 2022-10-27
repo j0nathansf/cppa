@@ -4,11 +4,10 @@
 
 using namespace std;
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
     if (argc < 2)
-    {
         return 1;
-    }
     string file_path = argv[1];
     string motive = argv[2];
     int nb = 0;
@@ -22,10 +21,8 @@ int main(int argc, char **argv) {
     }
     while (file >> word)
     {
-        if (word.compare(motive) == 0)
-        {
+        if (word.find(argv[2]) != std::string::npos)
             nb += 1;
-        }
     }
     cout << "The file " << file_path << " contains " << nb << " words containing the motive " << motive << "\n";
     file.close();

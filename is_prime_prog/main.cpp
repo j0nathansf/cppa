@@ -1,9 +1,9 @@
 #include <iostream>
 #include <stdlib.h>
 
-std::string check_prime(int nb)
+std::string check_prime(long nb)
 {
-    if (nb == 1)
+    if (nb <= 1)
     {
         return "False";
     }
@@ -21,11 +21,12 @@ std::string check_prime(int nb)
     return "True";
 }
 
-int main(int argc, char** argv)
+int main(void)
 {
-    for (int i = 1; i < argc; i++)
+    long params;
+    while (std::cin >> params)
     {
-        std::cout << argv[i] << " is a prime: " << check_prime(atoi(argv[i])) << "\n";
+        std::cout << params << " is a prime: " << check_prime(params) << "\n";
     }
     return 0;
 }
